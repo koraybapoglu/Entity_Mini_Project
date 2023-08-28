@@ -1,4 +1,4 @@
-# Proje Adı
+# ÜYE-SİPARİŞ UYGULAMASI
 
 Bu proje, Entity Framework Core ve ASP.NET 7.0 kullanılarak geliştirilen bir Console Uygulamasını içermektedir. Proje, üye işlemleri, admin paneli ve sipariş yönetimi gibi temel özellikleri içermektedir.
 
