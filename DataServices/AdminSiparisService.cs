@@ -48,10 +48,18 @@ namespace Entity_Musteri_Siparis_Project.DataServices
 				{
                     Console.WriteLine("Durumunu Ne Yapmak İstiyorsunuz ?");
                     Console.WriteLine("Reddedildi-Onaylandı");
-					siparisdurumguncelle.SiparisDurumu = Console.ReadLine();
-					context.Siparisler.Update(siparisdurumguncelle);
-					context.SaveChanges();
-					Console.WriteLine("Siparişin Durumu Başarıyla Güncellendi !");
+					if (Convert.ToString(Console.ReadLine().ToUpper())=="REDDEDİLDİ" ||Convert.ToString(Console.ReadLine()).ToUpper()=="ONAYLANDI")
+					{
+						siparisdurumguncelle.SiparisDurumu = Console.ReadLine();
+						context.Siparisler.Update(siparisdurumguncelle);
+						context.SaveChanges();
+						Console.WriteLine("Siparişin Durumu Başarıyla Güncellendi !");
+					}
+					else
+					{
+                        Console.WriteLine("HATALI GİRİŞ YAPTINIZ LÜTFEN TEKRAR DENEYİNİZ.");
+                    }
+					
                 }
 				else
 				{
